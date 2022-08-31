@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+void main(){
+    
+    int resp, comida, bebida, sobremesa, res, total;
+    float pedido = 0;
+    
+    do{
+        
+        do{
+            //escolha da comida 
+            
+            printf("\n\n HAMBURGUER \n\n");
+            printf("1. burguer R$10.50 \n 2. misto R$20.00 \n 3. americano R$39.99 \n 4. nenhum \n");
+            scanf("%d",&comida);
+            
+            if(comida == 1){
+                
+                pedido = pedido + 10.50;
+            }
+            
+            if(comida == 2){
+                
+                pedido = pedido + 20;
+            }
+            if (comida == 3){
+                
+                pedido = pedido + 39.99;
+            }
+            
+            if (comida == 4){
+                    
+                pedido = pedido + 0;
+            }
+            
+            if(comida > 4) {
+                
+                printf("entre com uma opcao valida \n");
+            }
+            if(comida < 1){
+                
+                printf("entre com uma opcao valida \n");
+            }
+            
+            printf("deseja pedir mais hamburguer? \n 1.sim \n 2.nao \n");
+            scanf("%d", &resp);
+        }
+        
+        while(resp==1);
+        
+        do{
+            //escolha da bebida
+            
+            printf("\n\n BEBIDA \n\n");
+            printf("1. refrigerante R$9.00 \n\n 2. agua R$6.50 \n\n 3. suco R$5.60 \n\n 4. nenhum \n\n");
+            scanf("%d",&bebida);
+            
+            if(bebida == 1){
+                
+                pedido = pedido + 9;
+            }
+            
+            if(bebida == 2){
+                
+                pedido = pedido + 6.50;
+            }
+            
+            if(bebida == 3){
+                
+                pedido = pedido + 5.50;
+            }
+            
+            if(bebida == 4){
+                
+                pedido = pedido + 0;
+            }
+            
+            if(bebida > 4){
+                
+                printf("entre com uma opcao valida \n");
+            }
+            if(bebida < 1){
+                
+                printf("entre com uma opcao valida \n");
+            }
+            
+            printf("deseja pedir mais bebida? \n 1.sim \n 2.nao \n");
+            scanf("%d",&resp);
+            
+        }
+        
+        while(resp==1);
+        
+        do{
+        
+        //escolha da sobremesa
+            
+            printf("\n\n SOBREMESA \n\n");
+            printf("1. sorvete R$10.00 \n\n 2. chocolate R$5.60 \n\n 3. bolo R$15.99 \n\n 4. nenhum \n\n");
+            scanf("%d", &sobremesa);
+            
+            if(sobremesa == 1){
+                
+                pedido = pedido + 10;
+            }
+            
+            if(sobremesa == 2){
+                
+                pedido = pedido + 5.60;
+            }
+            
+            if(sobremesa == 3){
+                
+                pedido = pedido + 15.99;
+            }
+            
+            if(sobremesa == 4){
+                
+                pedido = pedido + 0;
+            }
+            
+            if(sobremesa > 4){
+                
+                printf("entre com uma opcao valida \n");
+            }
+            
+            if(sobremesa < 1){
+                
+                printf("entre com uma opcao valida \n");
+            }
+            
+            printf("deseja pedir mais sobremesa? \n1.sim \n 2.nao \n");
+            scanf("%d",&resp);
+        }
+        
+        while(resp==1);
+        
+        printf("deseja fechar o pedido? \n 1.sim \n 2.nao \n");
+        scanf("%d",&res);
+        
+    }
+    
+    while(res==2);
+    
+    printf("pedido total: %.2f \n", pedido);
+}
