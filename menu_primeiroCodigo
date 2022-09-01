@@ -4,7 +4,7 @@
 
 void main(){
     
-    int resp, comida, bebida, sobremesa, res, total;
+    int resp, comida, bebida, sobremesa, res, pag, cart;
     float pedido = 0;
     
     do{
@@ -19,29 +19,35 @@ void main(){
             if(comida == 1){
                 
                 pedido = pedido + 10.50;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(comida == 2){
                 
                 pedido = pedido + 20;
+                printf("pedido: %.2f \n", pedido);
             }
             if (comida == 3){
                 
                 pedido = pedido + 39.99;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if (comida == 4){
                     
                 pedido = pedido + 0;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(comida > 4) {
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             if(comida < 1){
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             
             printf("deseja pedir mais hamburguer? \n 1.sim \n 2.nao \n");
@@ -60,30 +66,36 @@ void main(){
             if(bebida == 1){
                 
                 pedido = pedido + 9;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(bebida == 2){
                 
                 pedido = pedido + 6.50;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(bebida == 3){
                 
                 pedido = pedido + 5.50;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(bebida == 4){
                 
                 pedido = pedido + 0;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(bebida > 4){
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             if(bebida < 1){
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             
             printf("deseja pedir mais bebida? \n 1.sim \n 2.nao \n");
@@ -104,31 +116,37 @@ void main(){
             if(sobremesa == 1){
                 
                 pedido = pedido + 10;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(sobremesa == 2){
                 
                 pedido = pedido + 5.60;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(sobremesa == 3){
                 
                 pedido = pedido + 15.99;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(sobremesa == 4){
                 
                 pedido = pedido + 0;
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(sobremesa > 4){
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             
             if(sobremesa < 1){
                 
                 printf("entre com uma opcao valida \n");
+                printf("pedido: %.2f \n", pedido);
             }
             
             printf("deseja pedir mais sobremesa? \n1.sim \n 2.nao \n");
@@ -136,6 +154,8 @@ void main(){
         }
         
         while(resp==1);
+        
+        printf("pedido: %.2f \n", pedido);
         
         printf("deseja fechar o pedido? \n 1.sim \n 2.nao \n");
         scanf("%d",&res);
@@ -145,4 +165,42 @@ void main(){
     while(res==2);
     
     printf("pedido total: %.2f \n", pedido);
+    printf("qual a forma de pagamento? \n 1.cartão \n\n 2.dinheiro \n\n 2.PIX \n\n");
+    scanf("%d",&pag);
+    
+    //pagamento via cartao
+    
+    if(pag==1){
+        
+        printf("insira o cartão \n");
+        printf("digite a senha: \n");
+        scanf("%d",&cart);
+        printf("pagamento concluido! \n");
+        printf("senha: A45 \n");
+    }
+    
+    //pagamento via dinheiro
+    
+    if(pag ==2){
+        
+        printf("dirija-se ao caixa \n");
+        printf("senha: A23 \n");
+    }
+    
+    //pagamento via PIX
+    
+    if(pag==3){
+        
+        printf("chave pix: (01) 23456-7890 \n");
+        printf("aguardando... \n");
+        printf("pagamento concluido! \n");
+        printf("senha: B67 \n");
+    }
+    
+    //excecao
+    
+    if(pag > 3 && pag < 1){
+        
+        printf("entre com uma opcao valida \n");
+    }
 }
