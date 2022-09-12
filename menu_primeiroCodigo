@@ -173,7 +173,7 @@ void main(){
     
     else{
         
-        printf("qual a forma de pagamento? \n 1.cartão \n\n 2.dinheiro \n\n 2.PIX \n\n");
+        printf("qual a forma de pagamento? \n 1.cartão \n\n 2.dinheiro \n\n 3.PIX \n\n");
     scanf("%d",&pag);
     
     //pagamento via cartao
@@ -212,4 +212,7 @@ void main(){
         printf("entre com uma opcao valida \n");
     }
     }
+    
+    
+    system("pause");
 }
