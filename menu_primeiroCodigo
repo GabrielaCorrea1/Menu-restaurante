@@ -244,55 +244,57 @@ void main(){
     
     while(res==2);
     
-    printf("pedido total: R$%.2f \n", pedido);
+    do{
+        do{
+            printf("pedido total: R$%.2f \n", pedido);
     
-    if(pedido == 0){
+            if(pedido == 0){
         
-        printf("valor insuficiente para pagamento \n");
+                printf("valor insuficiente para pagamento \n");
+            }
+    
+            else{
+        
+                printf("qual a forma de pagamento? \n 1.cartão \n\n 2.dinheiro \n\n 3.PIX \n\n");
+            scanf("%d",&pag);
+    
+            //pagamento via cartao
+    
+            if(pag==1){
+        
+                printf("insira o cartão \n");
+                printf("digite a senha: \n");
+                scanf("%d",&cart);
+                printf("pagamento concluido! \n");
+                printf("senha: A45 \n");
+            }
+    
+            //pagamento via dinheiro
+    
+            if(pag ==2){
+        
+                printf("dirija-se ao caixa \n");
+            }
+    
+            //pagamento via PIX
+    
+            if(pag==3){
+        
+                printf("chave pix: (01) 23456-7890 \n");
+                printf("aguardando... \n");
+                printf("pagamento concluido! \n");
+                printf("senha: B67 \n");
+            }
+        }
+        }
+        
+        //excecao
+        
+        while(pag > 3);
     }
-    
-    else{
-        
-        printf("qual a forma de pagamento? \n 1.cartão \n\n 2.dinheiro \n\n 3.PIX \n\n");
-    scanf("%d",&pag);
-    
-    //pagamento via cartao
-    
-    if(pag==1){
-        
-        printf("insira o cartão \n");
-        printf("digite a senha: \n");
-        scanf("%d",&cart);
-        printf("pagamento concluido! \n");
-        printf("senha: A45 \n");
-    }
-    
-    //pagamento via dinheiro
-    
-    if(pag ==2){
-        
-        printf("dirija-se ao caixa \n");
-        printf("senha: A23 \n");
-    }
-    
-    //pagamento via PIX
-    
-    if(pag==3){
-        
-        printf("chave pix: (01) 23456-7890 \n");
-        printf("aguardando... \n");
-        printf("pagamento concluido! \n");
-        printf("senha: B67 \n");
-    }
-    
     //excecao
     
-    if(pag > 3 && pag < 1){
-        
-        printf("entre com uma opcao valida \n");
-    }
-    }
-    
+    while(pag<1);
     
     system("pause");
 }
