@@ -4,7 +4,7 @@
 
 void main(){
     
-    int resp, comida, bebida, sobremesa, res, pag, cart;
+    int resp, comida, bebida, sobremesa, res, pag, cart, burguer = 2, misto = 3, americano = 2, refri = 1, agua = 5, suco = 2,sorvete = 1, chocolate = 2, bolo = 2;
     float pedido = 0;
     
     do{
@@ -18,19 +18,46 @@ void main(){
             
             if(comida == 1){
                 
-                pedido = pedido + 10.50;
-                printf("pedido: %.2f \n", pedido);
+                if(burguer > 0){
+                    
+                    pedido = pedido + 10.50;
+                    burguer = burguer - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else {
+                    
+                    printf("nao temos mais burguer! \n");
+                }
             }
             
             if(comida == 2){
                 
-                pedido = pedido + 20;
-                printf("pedido: %.2f \n", pedido);
+                if(misto > 0){
+                    
+                    pedido = pedido + 20;
+                    misto = misto - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else {
+                    
+                    printf("nao temos mais misto! \n");
+                }
             }
             if (comida == 3){
                 
-                pedido = pedido + 39.99;
-                printf("pedido: %.2f \n", pedido);
+                if(americano > 0){
+                    
+                    pedido = pedido + 39.99;
+                    americano = americano -1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else {
+                    
+                    printf("nao temos mais americano! \n");
+                }
             }
             
             if (comida == 4){
@@ -65,20 +92,46 @@ void main(){
             
             if(bebida == 1){
                 
-                pedido = pedido + 9;
-                printf("pedido: %.2f \n", pedido);
+                if(refri > 0){
+                    
+                    pedido = pedido + 9;
+                    refri = refri - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else{
+                    printf("nao temos mais refrigerante! \n");
+                }
             }
             
             if(bebida == 2){
                 
-                pedido = pedido + 6.50;
-                printf("pedido: %.2f \n", pedido);
+                if (agua > 0){
+                    
+                    pedido = pedido + 6.50;
+                    agua = agua - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else{
+                    
+                    printf("nao temos mais agua! \n");
+                }
             }
             
             if(bebida == 3){
                 
-                pedido = pedido + 5.50;
-                printf("pedido: %.2f \n", pedido);
+                if(suco > 0){
+                    
+                    pedido = pedido + 5.50;
+                    suco = suco -1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else{
+                    
+                    printf("nao temos mais suco! \n");
+                }
             }
             
             if(bebida == 4){
@@ -115,20 +168,47 @@ void main(){
             
             if(sobremesa == 1){
                 
-                pedido = pedido + 10;
-                printf("pedido: %.2f \n", pedido);
+                if(sorvete > 0){
+                    
+                    pedido = pedido + 10;
+                    sorvete = sorvete - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else{
+                    
+                    printf("nao temos mais sorvete! \n");
+                }
             }
             
             if(sobremesa == 2){
                 
-                pedido = pedido + 5.60;
-                printf("pedido: %.2f \n", pedido);
+                if(chocolate > 0){
+                    
+                    pedido = pedido + 5.60;
+                    chocolate = chocolate - 1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else {
+                    
+                    printf("nao temos mais chocolate! \n");
+                }
             }
             
             if(sobremesa == 3){
                 
-                pedido = pedido + 15.99;
-                printf("pedido: %.2f \n", pedido);
+                if(bolo > 0){
+                    
+                    pedido = pedido + 15.99;
+                    bolo = bolo -1;
+                    printf("pedido: %.2f \n", pedido);
+                }
+                
+                else{
+                    
+                    printf("nao temos mais bolo! \n");
+                }
             }
             
             if(sobremesa == 4){
@@ -164,7 +244,7 @@ void main(){
     
     while(res==2);
     
-    printf("pedido total: %.2f \n", pedido);
+    printf("pedido total: R$%.2f \n", pedido);
     
     if(pedido == 0){
         
